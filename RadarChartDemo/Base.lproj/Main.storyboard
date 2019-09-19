@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xYx-IG-eCJ">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="7aG-65-dmU">
+            <objects>
+                <viewController id="YiJ-Qk-Rs7" customClass="ViewController" customModule="RadarChartDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VFq-Hp-iGA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1A-ZF-AzG" customClass="DDSpiderChartView" customModule="RadarChartDemo" customModuleProvider="target">
+                                <rect key="frame" x="87" y="337" width="240" height="222"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="DfB-8a-etM"/>
+                                    <constraint firstAttribute="height" constant="222" id="WJw-s2-o4J"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dSE-Ek-J2B">
+                                <rect key="frame" x="87" y="187" width="255" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentChoose:" destination="YiJ-Qk-Rs7" eventType="valueChanged" id="0Ru-ot-ljQ"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="a1A-ZF-AzG" firstAttribute="centerY" secondItem="VFq-Hp-iGA" secondAttribute="centerY" id="c3O-rI-QY1"/>
+                            <constraint firstItem="a1A-ZF-AzG" firstAttribute="centerX" secondItem="VFq-Hp-iGA" secondAttribute="centerX" id="sdQ-8n-EDm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vxk-x0-pPp"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jbz-4n-fpp"/>
+                    <connections>
+                        <outlet property="spiderChartView" destination="a1A-ZF-AzG" id="MfY-NA-DbJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U8L-Gx-wdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4601.449275362319" y="111.83035714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NKB-3e-GSI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xYx-IG-eCJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sFb-P1-FIT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YiJ-Qk-Rs7" kind="relationship" relationship="rootViewController" id="JT7-rc-3sE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WNQ-OH-gCP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3691.3043478260875" y="111.83035714285714"/>
+        </scene>
+    </scenes>
+</document>
